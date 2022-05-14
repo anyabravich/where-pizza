@@ -12,8 +12,13 @@ const Container = ({children}) => {
 
 const ContainerBox = styled.div`
   max-width: ${rem(1290)};
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0 auto;
+  padding: 0 ${rem(80)};
+  box-sizing: content-box;
+  @media ${props => props.theme.breakpoints.md} {
+    padding: 0 ${rem(20)};
+  }
 `
 
 export default Container

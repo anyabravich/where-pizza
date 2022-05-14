@@ -1,3 +1,6 @@
+import Container from 'components/Container'
+import H2 from 'components/H2'
+import Row from 'components/Row'
 import Head from 'next/head'
 import React from 'react'
 
@@ -7,7 +10,11 @@ const Components = () => {
       <Head>
         <title>Components</title>
       </Head>
-      <h1>Components</h1>
+      <Container>
+        <Row>
+          <H2>H2</H2>
+        </Row>
+      </Container>
     </>
   )
 }
