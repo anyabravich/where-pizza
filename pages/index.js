@@ -7,7 +7,9 @@ export default function Home() {
       <Head>
         <title>Where Pizza</title>
       </Head>
-      <Container />
+      <Container>
+        Container
+      </Container>
     </>
   )
 }
