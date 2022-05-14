@@ -2,17 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 
-const Container = () => {
+const Container = ({children}) => {
   return (
-    <ContainerBox>Container</ContainerBox>
+    <ContainerBox>
+      {children}
+    </ContainerBox>
   )
 }
 
 const ContainerBox = styled.div`
-  min-width: ${rem(200)};
-  display: inline-block;
-  background: green;
-  font-size: ${rem(50)};
+  max-width: ${rem(1290)};
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  padding: 0 ${rem(80)};
+  box-sizing: content-box;
+  @media ${props => props.theme.breakpoints.md} {
+    padding: 0 ${rem(20)};
+  }
 `
 
 export default Container

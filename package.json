@@ -13,9 +13,11 @@
     "polished": "^4.2.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.1.4"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.9.0",
     "eslint-config-next": "12.1.0"
   }
