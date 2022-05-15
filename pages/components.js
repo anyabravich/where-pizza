@@ -1,5 +1,8 @@
+import Button from 'components/Button'
+import Card from 'components/Card'
 import Container from 'components/Container'
 import H2 from 'components/H2'
+import Label from 'components/Label'
 import Row from 'components/Row'
 import Head from 'next/head'
 import React from 'react'
@@ -13,6 +16,16 @@ const Components = () => {
       <Container>
         <Row>
           <H2>H2</H2>
+        </Row>
+        <Row>
+          <Label page='components'>New</Label>
+          <Label size='big' page='components'>New</Label>
+        </Row>
+        <Row>
+          <Button>Выбрать</Button>
+        </Row>
+        <Row>
+          <Card />
         </Row>
       </Container>
     </>
