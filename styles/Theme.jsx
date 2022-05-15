@@ -6,7 +6,10 @@ const theme = {
     black: '#191919',
     white: '#ffffff',
     red: '#e23535',
-    primary: '#FF7010'
+    primary: '#FF7010',
+    line: {
+      grey: '#F0F0F0'
+    }
   },
   breakpoints: {
     sm: '(max-width: 576px)',
@@ -15,6 +18,7 @@ const theme = {
   radius: {
     label: 10,
     button: 6,
+    card: 12,
   },
 };
 

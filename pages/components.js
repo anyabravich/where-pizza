@@ -1,4 +1,5 @@
 import Button from 'components/Button'
+import Card from 'components/Card'
 import Container from 'components/Container'
 import H2 from 'components/H2'
 import Label from 'components/Label'
@@ -17,11 +18,14 @@ const Components = () => {
           <H2>H2</H2>
         </Row>
         <Row>
-          <Label>New</Label>
-          <Label size='big'>New</Label>
+          <Label page='components'>New</Label>
+          <Label size='big' page='components'>New</Label>
         </Row>
         <Row>
           <Button>Выбрать</Button>
+        </Row>
+        <Row>
+          <Card />
         </Row>
       </Container>
     </>

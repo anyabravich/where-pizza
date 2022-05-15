@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 
-const Label = ({children, size = 'small'}) => {
+const Label = ({children, size = 'small', page}) => {
   return (
     <LabelBox
       size={size}
+      page={page}
     >
       {children}
     </LabelBox>
@@ -34,6 +35,18 @@ const LabelBox = styled.div`
           font-size: ${rem(18)};
           line-height: 133%;
         `
+      }
+    }
+  }
+  ${
+    props => {
+      if (props.page !== 'components') {
+        return `
+            position: absolute;
+            top: ${rem(20)};
+            left: 0;
+            z-index: 1;
+          `
       }
     }
   }
