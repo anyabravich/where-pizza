@@ -16,7 +16,7 @@ const LabelBox = styled.div`
   display: inline-flex;
   color: ${props => props.theme.colors.white};
   background: ${props => props.theme.colors.red};
-  border-radius: ${props => `0 ${rem(props.theme.radius)} ${rem(props.theme.radius)} 0`};
+  border-radius: ${props => `0 ${rem(props.theme.radius.label)} ${rem(props.theme.radius.label)} 0`};
   cursor: default;
   font-weight: 400;
   text-align: center;

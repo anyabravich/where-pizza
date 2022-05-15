@@ -1,3 +1,4 @@
+import Button from 'components/Button'
 import Container from 'components/Container'
 import H2 from 'components/H2'
 import Label from 'components/Label'
@@ -18,6 +19,9 @@ const Components = () => {
         <Row>
           <Label>New</Label>
           <Label size='big'>New</Label>
+        </Row>
+        <Row>
+          <Button>Выбрать</Button>
         </Row>
       </Container>
     </>
