@@ -8,7 +8,7 @@ const TextMini = ({children}) => {
   )
 }
 
-const TextMiniBox = styled.p`
+export const TextMiniBox = styled.span`
   font-weight: 400;
   font-size: ${rem(14)};
   line-height: 129%;
