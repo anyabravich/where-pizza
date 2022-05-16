@@ -6,6 +6,8 @@ import TextMini from './TextMini'
 import TextMiniBold from './TextMiniBold'
 import IconText from './IconText'
 import { Icons } from 'styles/Icons'
+import Logo from './Logo'
+import ButtonBasket from './ButtonBasket'
 
 const Header = () => {
   return (
@@ -27,7 +29,10 @@ const Header = () => {
       </HeaderTop>
       <HeaderBottom>
         <Container>
-          Header
+          <HeaderBottomBox>
+            <Logo />
+            <ButtonBasket />
+          </HeaderBottomBox>
         </Container>
       </HeaderBottom>
     </HeaderBox>
@@ -35,6 +40,9 @@ const Header = () => {
 }
 
 const HeaderBox = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background: ${props => props.theme.colors.white};
 `
 
@@ -67,6 +75,12 @@ const HeaderTopRight = styled(HeaderTopLeft)`
   @media ${props => props.theme.breakpoints.sm} {
     display: ${props => props.dSmNone ? 'none' : null};
   }
+`
+
+const HeaderBottomBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 export default Header

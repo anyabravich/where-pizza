@@ -4,12 +4,11 @@ import Main from "components/Main"
 import Head from "node_modules/next/head"
 import GlobalStyle from "styles/GlobalStyle"
 import Theme from "styles/Theme"
-import styled from 'styled-components'
-import { rem } from 'polished'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* TODO: найти информацию где должен быть GlobalStyle */}
       <GlobalStyle />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
