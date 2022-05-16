@@ -6,7 +6,11 @@ const theme = {
     black: '#191919',
     white: '#ffffff',
     red: '#e23535',
-    primary: '#FF7010',
+    grey: '#a5a5a5',
+    primary: {
+      default: '#FF7010',
+      light: '#FFEEE2'
+    },
     line: {
       grey: '#F0F0F0'
     }
@@ -18,6 +22,7 @@ const theme = {
   radius: {
     label: 10,
     button: 6,
+    price: 6,
     card: 12,
   },
 };
