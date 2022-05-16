@@ -14,7 +14,7 @@ const Footer = () => {
 }
 
 const FooterBox = styled.footer`
-
+  margin-top: auto;
 `
 
 export default Footer
