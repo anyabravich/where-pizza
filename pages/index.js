@@ -12,6 +12,8 @@ export default function Home() {
       <Container>
         <Row>
           <h1>Where Pizza</h1>
+        </Row>
+        <Row>
           <Link href="/components">
             <a>Components</a>
           </Link>
