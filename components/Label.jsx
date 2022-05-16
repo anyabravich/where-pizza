@@ -58,6 +58,7 @@ const LabelBox = styled.div`
             padding: ${rem(4)} ${rem(8)};
             font-size: ${rem(12)};
             line-height: 117%;
+            top: ${rem(8)};
           `
         } else {
           return `
