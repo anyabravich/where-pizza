@@ -15,11 +15,11 @@ const Header = () => {
           <HeaderTopBox>
             <HeaderTopLeft>
               <IconText icon={Icons('location')} text='Москва' />
-              <TextMini>Проверить адрес</TextMini>
-              <TextMini>Среднее время доставки*: <TextMiniBold>00:24:19</TextMiniBold></TextMini>
+              <TextMini dXlNone={true}>Проверить адрес</TextMini>
+              <TextMini dSmNone={true}>Среднее время доставки*: <TextMiniBold pl={4}>00:24:19</TextMiniBold></TextMini>
             </HeaderTopLeft>
             <HeaderTopRight>
-              <TextMini>Время работы: с 11:00 до 23:00</TextMini>
+              <TextMini dLgNone={true}>Время работы: с 11:00 до 23:00</TextMini>
               <IconText icon={Icons('account')}  text='Войти в аккаунт' />
             </HeaderTopRight>
           </HeaderTopBox>
