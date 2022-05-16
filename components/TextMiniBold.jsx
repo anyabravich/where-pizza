@@ -12,6 +12,9 @@ const TextMiniBold = ({children, pl}) => {
 const TextMiniBoldBox = styled(TextMiniBox)`
   font-weight: 600;
   padding-left: ${props => rem(props.pl)};
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: ${rem(12)};
+  }
 `
 
 export default TextMiniBold

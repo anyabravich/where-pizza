@@ -23,6 +23,7 @@ export const TextMiniBox = styled.span`
   color: ${props => props.theme.colors.black};
   @media ${props => props.theme.breakpoints.sm} {
     display: ${props => props.dSmNone ? 'none' : null};
+    font-size: ${rem(12)};
   }
   @media ${props => props.theme.breakpoints.lg} {
     display: ${props => props.dLgNone ? 'none' : null};

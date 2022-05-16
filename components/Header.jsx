@@ -16,9 +16,9 @@ const Header = () => {
             <HeaderTopLeft>
               <IconText icon={Icons('location')} text='Москва' />
               <TextMini dXlNone={true}>Проверить адрес</TextMini>
-              <TextMini dSmNone={true}>Среднее время доставки*: <TextMiniBold pl={4}>00:24:19</TextMiniBold></TextMini>
+              <TextMini>Среднее время доставки*: <TextMiniBold pl={4}>00:24:19</TextMiniBold></TextMini>
             </HeaderTopLeft>
-            <HeaderTopRight>
+            <HeaderTopRight dSmNone={true}>
               <TextMini dLgNone={true}>Время работы: с 11:00 до 23:00</TextMini>
               <IconText icon={Icons('account')}  text='Войти в аккаунт' />
             </HeaderTopRight>
@@ -57,8 +57,16 @@ const HeaderTopBox = styled.div`
 const HeaderTopLeft = styled.div`
   display: flex;
   gap: 0 ${rem(40)};
+  @media ${props => props.theme.breakpoints.sm} {
+    width: 100%;
+    justify-content: space-between;
+  }
 `
 
-const HeaderTopRight = styled(HeaderTopLeft)``
+const HeaderTopRight = styled(HeaderTopLeft)`
+  @media ${props => props.theme.breakpoints.sm} {
+    display: ${props => props.dSmNone ? 'none' : null};
+  }
+`
 
 export default Header
