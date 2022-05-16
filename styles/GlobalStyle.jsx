@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-size: 16px;
+    background: #F9F9F9;
   }
   li {
     margin: 0;

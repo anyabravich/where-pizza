@@ -8,7 +8,7 @@ import Text from './Text'
 import Button from './Button'
 import Label from './Label'
 import Price from './Price'
-import {pxToPercent} from 'styles/Mixins.js'
+import {pxToPercent} from 'styles/Mixins'
 import PriceContainer from './PriceContainer'
 
 const Card = () => {
@@ -43,6 +43,7 @@ const CardBox = styled.article`
   border-radius: ${props => `${rem(props.theme.radius.card)}`};
   max-width: ${rem(300)}; 
   overflow: hidden;
+  background: ${props => props.theme.colors.white};
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     align-items: flex-start;

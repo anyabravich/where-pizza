@@ -9,9 +9,10 @@ const PriceContainer = ({children}) => {
 }
 
 const PriceBox = styled.div`
-  /* text-align: right; */
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
+    gap: 0 ${rem(12)};
+    align-items: center;
   }
 `
 

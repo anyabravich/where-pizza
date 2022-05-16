@@ -41,6 +41,20 @@ const PriceBox = styled(SubtitleBox)`
     padding: ${rem(7)} ${rem(16)};
     border-radius: ${rem(6)};
     text-align: center;
+    ${
+    props => {
+      if (props.type === 'old') {
+        return `
+          padding: 0;
+          order: 1;
+        `
+      } else {
+        return `
+          
+        `
+      }
+    }
+  }
   }
 `
 
