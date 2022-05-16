@@ -4,9 +4,11 @@ import { rem } from 'polished'
 import TextMini from './TextMini'
 
 // TODO: сделать определение города пользователя
-const IconText = ({icon, text}) => {
+const IconText = ({icon, text, dSmNone = false}) => {
   return (
-    <IconTextBox>
+    <IconTextBox
+      dSmNone={dSmNone}
+    >
       <IconTextIcon icon={icon} />
       <TextMini>{text}</TextMini>
     </IconTextBox>
@@ -16,6 +18,9 @@ const IconText = ({icon, text}) => {
 const IconTextBox = styled.div`
   display: flex;
   align-items: center;
+  @media ${props => props.theme.breakpoints.sm} {
+    display: ${props => props.dSmNone ? 'none' : null};
+  }
 `
 
 const IconTextIcon = styled.i`
