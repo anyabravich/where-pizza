@@ -27,6 +27,7 @@ const theme = {
     price: 6,
     card: 12,
     basket: 4,
+    category: 12,
   },
 };
 
