@@ -9,10 +9,12 @@ import Row from 'components/Row'
 import Subtitle from 'components/Subtitle'
 import Text from 'components/Text'
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import { Icons } from 'styles/Icons'
 
 const Components = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <Head>
@@ -37,10 +39,15 @@ const Components = () => {
         </Row>
         <Row>
           <Button>Выбрать</Button>
-        </Row>
+        </Row> 
         <Row>
-          <Category icon={Icons('fire-active')} text='Акции' active={true} />
-          <Category icon={Icons('pizza')} text='Пицца' />
+          {/* 
+            TODO: надо писать нормальную функцию, а не инверсию состояния
+            Логика табов
+            https://qna.habr.com/q/647080
+          */}
+          <Category icon={Icons(!isActive ? 'fire-active' : 'fire')} text='Акции' active={!isActive} onClick={() => setIsActive(!isActive)} />
+          <Category icon={Icons(isActive ? 'pizza-active' : 'pizza')} text='Пицца' active={isActive} onClick={() => setIsActive(!isActive)} />
         </Row>
         <Row>
           <Card />
