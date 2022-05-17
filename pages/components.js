@@ -1,5 +1,6 @@
 import Button from 'components/Button'
 import Card from 'components/Card'
+import Category from 'components/Category'
 import Container from 'components/Container'
 import H2 from 'components/H2'
 import Label from 'components/Label'
@@ -9,6 +10,7 @@ import Subtitle from 'components/Subtitle'
 import Text from 'components/Text'
 import Head from 'next/head'
 import React from 'react'
+import { Icons } from 'styles/Icons'
 
 const Components = () => {
   return (
@@ -35,6 +37,10 @@ const Components = () => {
         </Row>
         <Row>
           <Button>Выбрать</Button>
+        </Row>
+        <Row>
+          <Category icon={Icons('fire-active')} text='Акции' active={true} />
+          <Category icon={Icons('pizza')} text='Пицца' />
         </Row>
         <Row>
           <Card />
