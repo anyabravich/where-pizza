@@ -30,7 +30,7 @@ const Header = () => {
       <HeaderBottom>
         <Container>
           <HeaderBottomBox>
-            <Logo />
+            <Logo w={141} />
             <ButtonBasket />
           </HeaderBottomBox>
         </Container>

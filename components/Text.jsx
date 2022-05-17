@@ -14,7 +14,7 @@ const Text = ({children, mb = 0, mbSm = 0}) => {
   )
 }
 
-const TextBox = styled.p`
+export const TextBox = styled.p`
   font-size: ${rem(16)};
   font-weight: 400;
   line-height: 138%;
