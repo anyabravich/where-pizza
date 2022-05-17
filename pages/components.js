@@ -3,6 +3,7 @@ import Card from 'components/Card'
 import Category from 'components/Category'
 import Container from 'components/Container'
 import H2 from 'components/H2'
+import H4 from 'components/H4'
 import Label from 'components/Label'
 import Price from 'components/Price'
 import Row from 'components/Row'
@@ -23,6 +24,9 @@ const Components = () => {
       <Container>
         <Row>
           <H2>H2</H2>
+        </Row>
+        <Row>
+          <H4>H4</H4>
         </Row>
         <Row>
           <Subtitle>Subtitle</Subtitle>
