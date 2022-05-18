@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
-import ItemImg from 'public/images/item-1.webp'
 import Image from 'node_modules/next/image'
 import Subtitle from './Subtitle'
 import Text from './Text'
@@ -10,35 +9,25 @@ import Label from './Label'
 import Price from './Price'
 import PriceContainer from './PriceContainer'
 
-const Card = ({img, title, description, oldPrice, price}) => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch('db/products.json')
-      .then(response => response.json())
-      .then(json => setProducts(json['products']))
-  }, []);
-
-  console.log(products);
-
+const Card = ({img, title, description, oldPrice, price, mw}) => {
   return (
-    <CardBox>
+    <CardBox mw={mw}>
       <Label>New</Label>
       <CardImg>
-        <Image src='/images/item-1.webp' alt='img' layout='fill' priority={true} />
+        <Image src={img} alt='img' layout='fill' priority={true} />
       </CardImg>
       <CardInfo>
         <Subtitle mb={12} mbSm={8}>
-          Картофель фри
+          {title}
         </Subtitle>
         <Text mb={16} mbSm={10}>
-          Картофель, масло растительное, декстроза, дифосфат натрия
+          {description}
         </Text>
         <CardControl>
           <Button mobile={false}>Выбрать</Button>
           <PriceContainer>
-            <Price color='primary' type='old'>от 699 ₽</Price>
-            <Price color='primary'>от 499 ₽</Price>
+            <Price color='primary' type='old'>{oldPrice}</Price>
+            <Price color='primary'>{price}</Price>
           </PriceContainer>
         </CardControl>
       </CardInfo>
@@ -50,7 +39,7 @@ const CardBox = styled.article`
   position: relative;
   border: ${rem(1)} solid ${props => props.theme.colors.line.grey};
   border-radius: ${props => `${rem(props.theme.radius.card)}`};
-  max-width: ${rem(300)}; 
+  max-width: ${props => rem(props.mw)}; 
   overflow: hidden;
   background: ${props => props.theme.colors.white};
   @media ${props => props.theme.breakpoints.sm} {
@@ -65,6 +54,7 @@ const CardBox = styled.article`
 const CardImg = styled.div`
   width: ${rem(300)};
   height: ${rem(300)};
+  margin: 0 auto;
   position: relative;
   @media ${props => props.theme.breakpoints.sm} {
     width: ${rem(100)};

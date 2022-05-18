@@ -1,14 +1,60 @@
 {
   "products": [
     {
-      "img": "/images/item-1.webp",
-      "title": "Картофель фри",
-      "text": "Картофель, масло растительное, декстроза, дифосфат натрия",
+      "img": "/images/pizza-1.png",
+      "title": "Чикен Сладкий Чили",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
       "oldPrice": "от 699 ₽",
       "price": "от 499 ₽"
     },
     {
-
+      "img": "/images/pizza-2.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/pizza-3.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/pizza-4.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/pizza-2.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/pizza-3.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/pizza-4.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/pizza-4.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
     }
   ]
 }

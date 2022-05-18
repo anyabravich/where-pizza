@@ -14,7 +14,7 @@ const H2 = ({children, mb = 0, align = 'left'}) => {
 }
 
 const H2Box = styled.h2`
-  margin-bottom: ${props => props.mb};
+  margin-bottom: ${props => rem(props.mb)};
   font-weight: 600;
   font-size: ${rem(40)};
   line-height: 120%;
