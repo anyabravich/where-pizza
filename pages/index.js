@@ -1,7 +1,9 @@
 import Container from 'components/Container'
+import H2 from 'components/H2'
 import Row from 'components/Row'
 import Head from 'next/head'
-import Link from 'next/link'
+import styled from 'styled-components'
+import { rem } from 'polished'
 
 export default function Home() {
   return (
@@ -9,16 +11,15 @@ export default function Home() {
       <Head>
         <title>Where Pizza</title>
       </Head>
-      <Container>
-        <Row>
-          <h1>Where Pizza</h1>
-        </Row>
-        <Row>
-          <Link href="/components">
-            <a>Components</a>
-          </Link>
-        </Row>
-      </Container>
+      <HomeBox>
+        <Container>
+          <H2 mb={32}>Пицца</H2>
+        </Container>
+      </HomeBox>
     </>
   )
 }
+
+const HomeBox = styled.div`
+  padding: ${rem(30)} 0 ${rem(60)};
+`
