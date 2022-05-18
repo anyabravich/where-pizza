@@ -54,7 +54,14 @@ const Components = () => {
           <Category icon={Icons(isActive ? 'pizza-active' : 'pizza')} text='Пицца' active={isActive} onClick={() => setIsActive(!isActive)} />
         </Row>
         <Row>
-          <Card />
+          <Card
+            mw={300}
+            img='/images/potato-1.webp' 
+            title='Картофель фри' 
+            description='Картофель, масло растительное, декстроза, дифосфат натрия'
+            oldPrice='от 699 ₽'
+            price='от 499 ₽'
+          />
         </Row>
       </Container>
     </>
