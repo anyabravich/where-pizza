@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 import ItemImg from 'public/images/item-1.webp'
@@ -8,15 +8,24 @@ import Text from './Text'
 import Button from './Button'
 import Label from './Label'
 import Price from './Price'
-import {pxToPercent} from 'styles/Mixins'
 import PriceContainer from './PriceContainer'
 
-const Card = () => {
+const Card = ({img, title, description, oldPrice, price}) => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('db/products.json')
+      .then(response => response.json())
+      .then(json => setProducts(json['products']))
+  }, []);
+
+  console.log(products);
+
   return (
     <CardBox>
       <Label>New</Label>
       <CardImg>
-        <Image src={ItemImg} alt='img' />
+        <Image src='/images/item-1.webp' alt='img' layout='fill' priority={true} />
       </CardImg>
       <CardInfo>
         <Subtitle mb={12} mbSm={8}>
@@ -54,9 +63,13 @@ const CardBox = styled.article`
 `
 
 const CardImg = styled.div`
+  width: ${rem(300)};
+  height: ${rem(300)};
+  position: relative;
   @media ${props => props.theme.breakpoints.sm} {
-    min-width: ${rem(100)};
-    flex: 1 0 ${pxToPercent(100, 350)};
+    width: ${rem(100)};
+    height: ${rem(100)};
+    flex: 1 0 auto;
   }
 `
 
