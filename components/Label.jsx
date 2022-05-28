@@ -21,6 +21,7 @@ const LabelBox = styled.div`
   cursor: default;
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
   ${
     props => {
       if (props.size === 'small') {
