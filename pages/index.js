@@ -78,8 +78,20 @@ export default function Home() {
               }
             </Swiper>
           </Categories>
+          {/* TODO: 
+            Перепиши эту хуйню пожалуйста 
+            Заголовки в json, все в 1 массив и мапнуть
+          */}
           <H2 mb={32}>Пицца</H2>
-          <Cards />
+          <Cards product={'pizza'} />
+          <H2 mb={32}>Суши</H2>
+          <Cards product={'sushi'} />
+          <H2 mb={32}>Закуски</H2>
+          <Cards product={'snacks'} />
+          <H2 mb={32}>Десерты</H2>
+          <Cards product={'desserts'} />
+          <H2 mb={32}>Напитки</H2>
+          <Cards product={'drink'} />
           <DeliveryInfo title='Доставка пиццы в Москве' />  
         </Container>
       </HomeBox>

@@ -9,12 +9,12 @@ import Label from './Label'
 import Price from './Price'
 import PriceContainer from './PriceContainer'
 
-const Card = ({img, title, description, oldPrice, price, mw}) => {
+const Card = ({img, title, description, oldPrice, price, mw, label}) => {
   return (
     <CardBox mw={mw}>
-      <Label>New</Label>
+      {label ? <Label>New</Label> : ''}
       <CardImg>
-        <Image src={img} alt='img' layout='fill' priority={true} />
+        <ImgBox src={img} alt='img' priority={true} />
       </CardImg>
       <CardInfo>
         <Subtitle mb={12} mbSm={8}>
@@ -52,14 +52,25 @@ const CardBox = styled.article`
 `
 
 const CardImg = styled.div`
-  width: ${rem(300)};
+  width: 100%;
   height: ${rem(300)};
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   @media ${props => props.theme.breakpoints.sm} {
     width: ${rem(100)};
     height: ${rem(100)};
     flex: 1 0 auto;
+  }
+`
+const ImgBox = styled.img`
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  @media ${props => props.theme.breakpoints.sm} {
+    position: relative;
+    object-fit: contain;
   }
 `
 
