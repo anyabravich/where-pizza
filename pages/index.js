@@ -79,7 +79,9 @@ export default function Home() {
             </Swiper>
           </Categories>
           <H2 mb={32}>Пицца</H2>
-          <Cards />
+          <Cards product={'pizza'} />
+          <H2 mb={32}>Суши</H2>
+          <Cards product={'sushi'} />
           <DeliveryInfo title='Доставка пиццы в Москве' />  
         </Container>
       </HomeBox>

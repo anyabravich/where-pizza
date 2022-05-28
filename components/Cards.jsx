@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import Card from './Card';
 
-const Cards = () => {
+const Cards = ({product}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch('db/db.json')
       .then(response => response.json())
-      .then(json => setProducts(json['products']))
-  }, []);
+      .then(json => setProducts(json[product]))
+  }, [product]);
 
   return (
     <CardsBox>
@@ -40,13 +40,7 @@ export const CardsBox = styled.div`
   }
   /* TODO: поинты вынести в переменные */
   @media (max-width: 1450px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: 1120px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 790px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(${rem(300)}, 1fr) );
   }
   @media ${props => props.theme.breakpoints.sm} {
     margin-bottom: ${rem(32)};

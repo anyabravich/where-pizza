@@ -42,10 +42,10 @@
       "id": 8
     }
   ],
-  "products": [
+  "pizza": [
     {
       "img": "/images/pizza-1.png",
-      "title": "Чикен Сладкий Чили",
+      "title": "EASY PEASY огуречный расколбас",
       "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
       "oldPrice": "от 699 ₽",
       "price": "от 499 ₽"
@@ -94,6 +94,64 @@
     },
     {
       "img": "/images/pizza-4.png",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    }
+  ],
+  "sushi": [
+    {
+      "img": "/images/sushi-1.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "от 699 ₽",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-2.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-3.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-4.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-2.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-3.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-4.webp",
+      "title": "EASY PEASY огуречный расколбас",
+      "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
+      "oldPrice": "",
+      "price": "от 499 ₽"
+    },
+    {
+      "img": "/images/sushi-4.webp",
       "title": "EASY PEASY огуречный расколбас",
       "description": "Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...",
       "oldPrice": "",
