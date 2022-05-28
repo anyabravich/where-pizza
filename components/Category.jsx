@@ -18,6 +18,7 @@ const CategoryBox = styled.button`
   background: ${props => props.theme.colors.white};
   border-radius: ${props => `${rem(props.theme.radius.category)}`};
   cursor: pointer;
+  border: 1px solid ${props => props.theme.colors.line.grey};
   @media ${props => props.theme.breakpoints.sm} {
     padding: ${rem(8)} ${rem(15)};
     display: flex;

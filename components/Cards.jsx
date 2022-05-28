@@ -34,6 +34,11 @@ export const CardsBox = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: ${rem(30)};
+  margin-bottom: ${rem(48)};
+  &:last-child {
+    margin-bottom: ${rem(60)};
+  }
+  /* TODO: поинты вынести в переменные */
   @media (max-width: 1450px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -42,6 +47,12 @@ export const CardsBox = styled.div`
   }
   @media (max-width: 790px) {
     grid-template-columns: 1fr;
+  }
+  @media ${props => props.theme.breakpoints.sm} {
+    margin-bottom: ${rem(32)};
+    &:last-child {
+      margin-bottom: ${rem(31)};
+    }
   }
 `
 
