@@ -21,7 +21,8 @@ const CategoryBox = styled.button`
   cursor: pointer;
   border: 1px solid ${props => props.theme.colors.line.grey};
   @media ${props => props.theme.breakpoints.sm} {
-    padding: ${rem(8)} ${rem(15)};
+    width: 100%;
+    padding: ${rem(8)} ${rem(12)};
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,6 +31,7 @@ const CategoryBox = styled.button`
 `
 
 const CategoryIcon = styled.i`
+  flex: 1 0 auto;
   display: block;
   width: ${rem(32)};
   height: ${rem(32)};
@@ -45,6 +47,7 @@ const CategoryIcon = styled.i`
 `
 
 const CategoryText = styled.p`
+  flex: 1 0 auto;
   font-weight: 400;
   font-size: ${rem(18)};
   text-align: center;

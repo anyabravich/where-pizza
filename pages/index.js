@@ -7,7 +7,13 @@ import Cards from 'components/Cards'
 import Category from 'components/Category'
 import Categories from 'components/Categories'
 import DeliveryInfo from 'components/DeliveryInfo'
-import { useEffect, useState } from 'react'
+
+import React, { useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -28,18 +34,27 @@ export default function Home() {
       <HomeBox>
         <Container>
           <Categories>
-            {
-              categories.map(({icon, text, id}) => (
-                <Category 
-                  key={id} 
-                  icon={icon} 
-                  text={text}
-                  id={id} 
-                  active={isActive === id ? true : false} 
-                  toggleTab={toggleTab}
-                />
-              ))
-            }
+            <Swiper
+              slidesPerView={2.9}
+              spaceBetween={12}
+              slidesPerGroup={1}
+              loop={true}
+              className="mySwiper"
+            >
+              {
+                categories.map(({icon, text, id}) => (
+                  <SwiperSlide key={id} >
+                    <Category 
+                      icon={icon} 
+                      text={text}
+                      id={id} 
+                      active={isActive === id ? true : false} 
+                      toggleTab={toggleTab}
+                    />
+                  </SwiperSlide>
+                ))
+              }
+            </Swiper>
           </Categories>
           <H2 mb={32}>Пицца</H2>
           <Cards />

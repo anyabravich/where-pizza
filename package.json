@@ -15,7 +15,7 @@
     "react-dom": "17.0.2",
     "sass": "^1.52.1",
     "styled-components": "^5.3.5",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.6"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.7",
