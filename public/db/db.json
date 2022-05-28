@@ -1,4 +1,47 @@
 {
+  "categories": [
+    {
+      "icon": "fire",
+      "text": "Акции",
+      "id": 1  
+    },
+    {
+      "icon": "pizza",
+      "text": "Пицца",
+      "id": 2
+    },
+    {
+      "icon": "sushi",
+      "text": "Суши",
+      "id": 3
+    },
+    {
+      "icon": "drink",
+      "text": "Напитки",
+      "id": 4
+    },
+    {
+      "icon": "snacks",
+      "text": "Закуски",
+      "id": 5
+    },
+    {
+      "icon": "combo",
+      "text": "Комбо",
+      "id": 6
+    },
+    {
+      "icon": "desserts",
+      "text": "Десерты",
+      "id": 7
+    }
+    ,
+    {
+      "icon": "sauces",
+      "text": "Соуса",
+      "id": 8
+    }
+  ],
   "products": [
     {
       "img": "/images/pizza-1.png",

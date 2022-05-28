@@ -10,8 +10,10 @@ const Categories = ({children}) => {
 
 const CategoriesBox = styled.div`
   display: flex;
+  justify-content: space-between;
   gap: ${rem(30)};
   margin-bottom: ${rem(30)};
+  overflow-x: auto;
   @media ${props => props.theme.breakpoints.sm} {
     margin-bottom: ${rem(20)};
   }

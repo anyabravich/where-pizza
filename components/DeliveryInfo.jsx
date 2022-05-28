@@ -12,7 +12,6 @@ const DeliveryInfo = ({title}) => {
 
   useEffect(() => {
     setHeight(Math.round(heightInfoDescription.current.getBoundingClientRect().height));
-    console.log(height);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -54,14 +53,14 @@ const DeliveryInfoDescriptionBox = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(transparent 40%, ${props => props.theme.colors.white} 100%);
+    background: linear-gradient(rgba(255, 255, 255, 0) 10%, #F9F9F9 100%);
   }
   @media ${props => props.theme.breakpoints.sm} {
     height: ${props => props.isShow ? rem(props.height) : rem(100)};
     margin-bottom: ${rem(12)};
     &::before {
       display: ${props => props.isShow ? 'none' : 'block'};;
-      background: linear-gradient(transparent 10%, ${props => props.theme.colors.white} 100%);
+      background: linear-gradient(rgba(255, 255, 255, 0) 15%, #F9F9F9 90%);
     }
   }
 `

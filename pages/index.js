@@ -5,13 +5,20 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import Cards from 'components/Cards'
 import Category from 'components/Category'
-import { Icons } from 'styles/Icons'
-import { useState } from 'react'
 import Categories from 'components/Categories'
 import DeliveryInfo from 'components/DeliveryInfo'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const [isActive, setIsActive] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [isActive, setIsActive] = useState(1);
+  const toggleTab = (index) => setIsActive(index);
+
+  useEffect(() => {
+    fetch('db/db.json')
+      .then(response => response.json())
+      .then(json => setCategories(json['categories']))
+  }, []);
 
   return (
     <>
@@ -21,8 +28,18 @@ export default function Home() {
       <HomeBox>
         <Container>
           <Categories>
-            <Category icon={Icons(!isActive ? 'fire-active' : 'fire')} text='Акции' active={!isActive} onClick={() => setIsActive(!isActive)} />
-            <Category icon={Icons(isActive ? 'pizza-active' : 'pizza')} text='Пицца' active={isActive} onClick={() => setIsActive(!isActive)} />
+            {
+              categories.map(({icon, text, id}) => (
+                <Category 
+                  key={id} 
+                  icon={icon} 
+                  text={text}
+                  id={id} 
+                  active={isActive === id ? true : false} 
+                  toggleTab={toggleTab}
+                />
+              ))
+            }
           </Categories>
           <H2 mb={32}>Пицца</H2>
           <Cards />

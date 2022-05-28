@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
+import { Icons } from 'styles/Icons';
 
-// TODO: написать логику выбора
-const Category = ({icon, text, active, onClick}) => {
+const Category = ({icon, text, id, active, toggleTab}) => {
   return (
-    <CategoryBox active={active} onClick={onClick}> 
-      <CategoryIcon icon={icon} />
-      <CategoryText>{text}</CategoryText>
+    <CategoryBox onClick={() => toggleTab(id)}> 
+      <CategoryIcon icon={active ? Icons(icon + '-active') : Icons(icon)} />
+      <CategoryText active={active}>{text}</CategoryText>
     </CategoryBox>
   )
 }
 
 const CategoryBox = styled.button`
+  width: ${rem(135)};
   padding: ${rem(20)} ${rem(40)};
   color: ${props => props.active ? props.theme.colors.red : props.theme.colors.black};
   background: ${props => props.theme.colors.white};
@@ -47,6 +48,7 @@ const CategoryText = styled.p`
   font-weight: 400;
   font-size: ${rem(18)};
   text-align: center;
+  color: ${props => props.active ? props.theme.colors.black : props.theme.colors.primary.default};
   @media ${props => props.theme.breakpoints.sm} {
     font-size: ${rem(14)};
   }
