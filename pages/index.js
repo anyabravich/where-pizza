@@ -5,13 +5,26 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import Cards from 'components/Cards'
 import Category from 'components/Category'
-import { Icons } from 'styles/Icons'
-import { useState } from 'react'
 import Categories from 'components/Categories'
 import DeliveryInfo from 'components/DeliveryInfo'
 
+import React, { useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 export default function Home() {
-  const [isActive, setIsActive] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [isActive, setIsActive] = useState(1);
+  const toggleTab = (index) => setIsActive(index);
+
+  useEffect(() => {
+    fetch('db/db.json')
+      .then(response => response.json())
+      .then(json => setCategories(json['categories']))
+  }, []);
 
   return (
     <>
@@ -21,8 +34,49 @@ export default function Home() {
       <HomeBox>
         <Container>
           <Categories>
-            <Category icon={Icons(!isActive ? 'fire-active' : 'fire')} text='Акции' active={!isActive} onClick={() => setIsActive(!isActive)} />
-            <Category icon={Icons(isActive ? 'pizza-active' : 'pizza')} text='Пицца' active={isActive} onClick={() => setIsActive(!isActive)} />
+            <Swiper
+              slidesPerView={2.9}
+              spaceBetween={12}
+              slidesPerGroup={1}
+              loop={true}
+              className="mySwiper"
+              breakpoints = {{
+                475: {
+                  slidesPerView: 3.7,
+                  spaceBetween: 20
+                },
+                896: {
+                  slidesPerView: 5.2,
+                  spaceBetween: 20
+                },
+                998: {
+                  slidesPerView: 6,
+                  spaceBetween: 30
+                },
+                1140: {
+                  slidesPerView: 7,
+                  spaceBetween: 20
+                },
+                1284: {
+                  slidesPerView: 8,
+                  spaceBetween: 30
+                }
+              }}
+            >
+              {
+                categories.map(({icon, text, id}) => (
+                  <SwiperSlide key={id} >
+                    <Category 
+                      icon={icon} 
+                      text={text}
+                      id={id} 
+                      active={isActive === id ? true : false} 
+                      toggleTab={toggleTab}
+                    />
+                  </SwiperSlide>
+                ))
+              }
+            </Swiper>
           </Categories>
           <H2 mb={32}>Пицца</H2>
           <Cards />

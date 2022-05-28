@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import Card from './Card';
 
-const Cards = ({children}) => {
+const Cards = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('db/products.json')
+    fetch('db/db.json')
       .then(response => response.json())
       .then(json => setProducts(json['products']))
   }, []);

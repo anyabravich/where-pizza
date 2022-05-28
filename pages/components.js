@@ -49,13 +49,8 @@ const Components = () => {
           <Button>Выбрать</Button>
         </Row> 
         <Row>
-          {/* 
-            TODO: надо писать нормальную функцию, а не инверсию состояния
-            Логика табов
-            https://qna.habr.com/q/647080
-          */}
-          <Category icon={Icons(!isActive ? 'fire-active' : 'fire')} text='Акции' active={!isActive} onClick={() => setIsActive(!isActive)} />
-          <Category icon={Icons(isActive ? 'pizza-active' : 'pizza')} text='Пицца' active={isActive} onClick={() => setIsActive(!isActive)} />
+          <Category page={'components'} icon={'fire'} text={'Акции'} id={1} active={isActive === 1 ? true : false} disabled />
+          <Category page={'components'} icon={'fire-active'} text={'Акции'} id={1} active={isActive === 1 ? true : false} disabled />
         </Row>
         <Row>
           <Card
