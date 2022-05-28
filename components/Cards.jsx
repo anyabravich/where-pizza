@@ -15,13 +15,14 @@ const Cards = ({product}) => {
   return (
     <CardsBox>
       {
-        products.map(({img, title, description, oldPrice, price}, index) => (
+        products.map(({img, title, description, oldPrice, price, label}, index) => (
           <Card 
             img={img} 
             title={title} 
             description={description} 
             oldPrice={oldPrice}
             price={price}
+            label={label}
             key={index}
           />
         ))

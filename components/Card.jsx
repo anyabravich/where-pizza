@@ -9,10 +9,10 @@ import Label from './Label'
 import Price from './Price'
 import PriceContainer from './PriceContainer'
 
-const Card = ({img, title, description, oldPrice, price, mw}) => {
+const Card = ({img, title, description, oldPrice, price, mw, label}) => {
   return (
     <CardBox mw={mw}>
-      <Label>New</Label>
+      {label ? <Label>New</Label> : ''}
       <CardImg>
         <ImgBox src={img} alt='img' priority={true} />
       </CardImg>
