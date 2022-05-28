@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 
-const H3 = ({children, mb}) => {
+const H3 = ({children, mb = 0, mbSm = 0}) => {
   return (
-    <H3Box mb={mb}>{children}</H3Box>
+    <H3Box mb={mb} mbSm={mbSm}>{children}</H3Box>
   )
 }
 
@@ -17,6 +17,7 @@ const H3Box = styled.h3`
   @media ${props => props.theme.breakpoints.sm} {
     font-size: ${rem(18)};
     line-height: 122%;
+    margin-bottom: ${props => rem(props.mbSm)};
   }
 `
 

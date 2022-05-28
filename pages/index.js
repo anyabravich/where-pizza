@@ -1,6 +1,5 @@
 import Container from 'components/Container'
 import H2 from 'components/H2'
-import Row from 'components/Row'
 import Head from 'next/head'
 import styled from 'styled-components'
 import { rem } from 'polished'
@@ -9,9 +8,12 @@ import Category from 'components/Category'
 import { Icons } from 'styles/Icons'
 import { useState } from 'react'
 import Categories from 'components/Categories'
+import DeliveryInfo from 'components/DeliveryInfo'
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
+  const [isShow, setIsShow] = useState(false);
+
   return (
     <>
       <Head>
@@ -25,6 +27,8 @@ export default function Home() {
           </Categories>
           <H2 mb={32}>Пицца</H2>
           <Cards />
+          <DeliveryInfo title='Доставка пиццы в Москве' isShow={isShow} setIsShow={setIsShow} />  
+          {/* <DeliveryInfo title='Доставка пиццы в Питере' isShow={isShow} setIsShow={setIsShow} />   */}
         </Container>
       </HomeBox>
     </>
