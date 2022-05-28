@@ -3,14 +3,11 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import ShowHideText from 'tools/context'
 
-const ShowBtnText = () => {
-  const [isShow, setIsShow] = useState(false);
-  function handleClicked() {
-    setIsShow(!isShow);
-    console.log(isShow)
-  }
+const ShowBtnText = ({isShow, setIsShow}) => {
   return (
-    <ShowBtnTextBox isShow={isShow} onClick={() => console.log(handleClicked())}>Показать полностью</ShowBtnTextBox>
+    <ShowBtnTextBox isShow={isShow} onClick={() => setIsShow(!isShow)}>
+      {isShow ? 'Скрыть' : 'Показать'}
+    </ShowBtnTextBox>
   )
 }
 

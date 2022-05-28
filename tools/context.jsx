@@ -1,5 +1,5 @@
 import React from 'react'
 
-const ShowHideText = React.createContext(false);
+const ThemeContext = React.createContext('light');
 
-export default ShowHideText;
+export default ThemeContext;

@@ -12,7 +12,6 @@ import DeliveryInfo from 'components/DeliveryInfo'
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
-  const [isShow, setIsShow] = useState(false);
 
   return (
     <>
@@ -27,8 +26,7 @@ export default function Home() {
           </Categories>
           <H2 mb={32}>Пицца</H2>
           <Cards />
-          <DeliveryInfo title='Доставка пиццы в Москве' isShow={isShow} setIsShow={setIsShow} />  
-          {/* <DeliveryInfo title='Доставка пиццы в Питере' isShow={isShow} setIsShow={setIsShow} />   */}
+          <DeliveryInfo title='Доставка пиццы в Москве' />  
         </Container>
       </HomeBox>
     </>
