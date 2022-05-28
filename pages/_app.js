@@ -5,6 +5,7 @@ import Head from "node_modules/next/head"
 import GlobalStyle from "styles/GlobalStyle"
 import Theme from "styles/Theme"
 import 'styles/fonts.scss'
+import 'styles/swiper.scss'
 
 function MyApp({ Component, pageProps }) {
   return (

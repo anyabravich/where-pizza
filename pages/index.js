@@ -40,6 +40,28 @@ export default function Home() {
               slidesPerGroup={1}
               loop={true}
               className="mySwiper"
+              breakpoints = {{
+                475: {
+                  slidesPerView: 3.7,
+                  spaceBetween: 20
+                },
+                896: {
+                  slidesPerView: 5.2,
+                  spaceBetween: 20
+                },
+                998: {
+                  slidesPerView: 6,
+                  spaceBetween: 30
+                },
+                1140: {
+                  slidesPerView: 7,
+                  spaceBetween: 20
+                },
+                1284: {
+                  slidesPerView: 8,
+                  spaceBetween: 30
+                }
+              }}
             >
               {
                 categories.map(({icon, text, id}) => (
