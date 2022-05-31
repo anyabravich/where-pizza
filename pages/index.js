@@ -7,6 +7,7 @@ import Cards from 'components/Cards'
 import Category from 'components/Category'
 import Categories from 'components/Categories'
 import DeliveryInfo from 'components/DeliveryInfo'
+import Popup from 'components/Popup'
 
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -94,6 +95,7 @@ export default function Home() {
           <Cards product={'drink'} />
           <DeliveryInfo title='Доставка пиццы в Москве' />  
         </Container>
+        <Popup />
       </HomeBox>
     </>
   )

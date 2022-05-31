@@ -9,7 +9,7 @@ const H4 = ({children, mb = 0}) => {
   )
 }
 
-const H4Box = styled.h4`
+export const H4Box = styled.h4`
   font-weight: 600;
   font-size: ${rem(20)};
   line-height: 140%;

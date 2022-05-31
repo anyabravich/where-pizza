@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
-import Image from 'node_modules/next/image'
+import Image from 'next/image'
 import Subtitle from './Subtitle'
 import Text from './Text'
 import Button from './Button'

@@ -28,6 +28,8 @@ const theme = {
     card: 12,
     basket: 4,
     category: 12,
+    popup: 24,
+    ingredient: 12,
   },
 };
 
