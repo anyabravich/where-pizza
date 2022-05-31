@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { rem } from 'polished'
 import { Icons } from 'styles/Icons'
 import Label from './Label'
-import Image from 'next/image'
+import { H4Box } from './H4'
+import Ingredients from './Ingredients'
 
 // TODO: реализовать клик вне popup
 const Popup = () => {
@@ -18,7 +19,12 @@ const Popup = () => {
           <PopupImg src={'/images/pizza-1.png'} alt='img' />
         </PopupImgBox>
         <PopupContent>
-          Контент
+          <PopupTitle>
+            <PopupTitleIcon />
+            Пепперони по-деревенски
+          </PopupTitle>
+          <PopupInfo />
+          <Ingredients />
         </PopupContent>
       </PopupBox>
     </PopupOverlay>
@@ -74,6 +80,37 @@ const PopupImg = styled.img`
   max-width: ${rem(450)};
 `
 
-const PopupContent = styled.div``
+const PopupContent = styled.div`
+  position: relative;
+  padding: ${rem(32)} ${rem(20)} ${rem(20)};
+`
+
+const PopupTitle = styled(H4Box)`
+  display: flex;
+  align-items: center;
+  margin-right: ${rem(20)};
+  margin-bottom: ${rem(16)};
+`
+
+const PopupTitleIcon = styled.i`
+  display: inline-flex;
+  width: ${rem(24)};
+  height: ${rem(24)};
+  background: url("${Icons('fire-active')}") no-repeat 0 0;
+  background-size: contain;
+  margin-right: ${rem(8)};
+  flex-shrink: 0;
+`
+
+const PopupInfo = styled.button`
+  position: absolute;
+  top: ${rem(34)};
+  right: ${rem(20)};
+  width: ${rem(24)};
+  height: ${rem(24)};
+  background: url("${Icons('info')}") no-repeat 0 0;
+  background-size: contain;
+  cursor: pointer;
+`
 
 export default Popup

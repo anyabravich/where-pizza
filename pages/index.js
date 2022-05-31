@@ -95,7 +95,7 @@ export default function Home() {
           <Cards product={'drink'} />
           <DeliveryInfo title='Доставка пиццы в Москве' />  
         </Container>
-        {/* <Popup /> */}
+        <Popup />
       </HomeBox>
     </>
   )
