@@ -5,6 +5,9 @@ import { Icons } from 'styles/Icons'
 import Label from './Label'
 import { H4Box } from './H4'
 import Ingredients from './Ingredients'
+import ButtonsPopup from './ButtonsPopup'
+import ButtonsPopupButton from './ButtonsPopupButton'
+import SubtitleTwo from './SubtitleTwo'
 
 // TODO: реализовать клик вне popup
 const Popup = () => {
@@ -25,6 +28,16 @@ const Popup = () => {
           </PopupTitle>
           <PopupInfo />
           <Ingredients />
+          <ButtonsPopup mb={16}>
+            <ButtonsPopupButton text={'Традиционное'} active />
+            <ButtonsPopupButton text={'Тонкое'} />
+          </ButtonsPopup>
+          <ButtonsPopup mb={24}>
+            <ButtonsPopupButton text={'20 см'} active />
+            <ButtonsPopupButton text={'28 см'} />
+            <ButtonsPopupButton text={'33 см'} />
+          </ButtonsPopup>
+          <SubtitleTwo mb={16}>Добавьте в пиццу</SubtitleTwo>
         </PopupContent>
       </PopupBox>
     </PopupOverlay>

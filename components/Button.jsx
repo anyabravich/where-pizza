@@ -13,7 +13,7 @@ const Button = ({children, view = 'full', mobile = true}) => {
   )
 }
 
-const ButtonBox = styled.button`
+export const ButtonBox = styled.button`
   color: ${props => props.theme.colors.white};
   background: ${props => props.theme.colors.primary.default};
   text-align: center;
