@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { rem } from 'polished'
 import Card from './Card';
 
 const Cards = ({product}) => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch('db/db.json')
-      .then(response => response.json())
-      .then(json => setProducts(json[product]))
-  }, [product]);
-
   return (
     <CardsBox>
       {
-        products.map(({img, title, description, oldPrice, price, label}, index) => (
+        product.map(({img, title, description, oldPrice, price, label}, index) => (
           <Card 
             img={img} 
             title={title} 
