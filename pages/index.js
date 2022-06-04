@@ -15,9 +15,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import CardsAndTitle from 'components/CardsAndTitle'
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
   const [isActive, setIsActive] = useState(1);
   const toggleTab = (index) => setIsActive(index);
 
@@ -25,6 +27,10 @@ export default function Home() {
     fetch('db/db.json')
       .then(response => response.json())
       .then(json => setCategories(json['categories']))
+      
+    fetch('db/db.json')
+      .then(response => response.json())
+      .then(json => setProducts(json['products']))
   }, []);
 
   return (
@@ -79,20 +85,11 @@ export default function Home() {
               }
             </Swiper>
           </Categories>
-          {/* TODO: 
-            Перепиши эту хуйню пожалуйста 
-            Заголовки в json, все в 1 массив и мапнуть
-          */}
-          <H2 mb={32}>Пицца</H2>
-          <Cards product={'pizza'} />
-          <H2 mb={32}>Суши</H2>
-          <Cards product={'sushi'} />
-          <H2 mb={32}>Закуски</H2>
-          <Cards product={'snacks'} />
-          <H2 mb={32}>Десерты</H2>
-          <Cards product={'desserts'} />
-          <H2 mb={32}>Напитки</H2>
-          <Cards product={'drink'} />
+          {
+            products.map((item, index) => {
+              return <CardsAndTitle title={item.name} product={item.product} key={index}  />
+            })
+          }
           <DeliveryInfo title='Доставка пиццы в Москве' />  
         </Container>
         {/* <Popup /> */}
