@@ -1,27 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
+import React from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
 import Card from './Card';
 
-const Cards = ({product}) => {
+const Cards = ({ product }) => {
   return (
     <CardsBox>
-      {
-        product.map(({img, title, description, oldPrice, price, label}, index) => (
-          <Card 
-            img={img} 
-            title={title} 
-            description={description} 
-            oldPrice={oldPrice}
-            price={price}
-            label={label}
-            key={index}
-          />
-        ))
-      }
+      {product.map(({ img, title, description, oldPrice, price, label }, index) => (
+        <Card img={img} title={title} description={description} oldPrice={oldPrice} price={price} label={label} key={index} />
+      ))}
     </CardsBox>
-  )
-}
+  );
+};
 
 export const CardsBox = styled.div`
   display: grid;
@@ -33,14 +23,14 @@ export const CardsBox = styled.div`
   }
   /* TODO: поинты вынести в переменные */
   @media (max-width: 1450px) {
-    grid-template-columns: repeat( auto-fit, minmax(${rem(300)}, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(${rem(300)}, 1fr));
   }
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.sm} {
     margin-bottom: ${rem(32)};
     &:last-child {
       margin-bottom: ${rem(31)};
     }
   }
-`
+`;
 
-export default Cards
+export default Cards;
