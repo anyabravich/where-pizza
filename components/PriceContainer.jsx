@@ -1,19 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
-const PriceContainer = ({children}) => {
-  return (
-    <PriceBox>{children}</PriceBox>
-  )
-}
+const PriceContainer = ({ children }) => {
+  return <PriceBox>{children}</PriceBox>;
+};
 
 const PriceBox = styled.div`
-  @media ${props => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
     gap: 0 ${rem(12)};
     align-items: center;
   }
-`
+`;
 
-export default PriceContainer
+export default PriceContainer;

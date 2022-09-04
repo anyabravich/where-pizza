@@ -1,15 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
+import React from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
 
-const Main = ({children}) => {
-  return (
-    <MainBox>{children}</MainBox>
-  )
-}
+const Main = ({ children }) => {
+  return <MainBox>{children}</MainBox>;
+};
 
-const MainBox = styled.main`
-  
-`
+const MainBox = styled.main``;
 
-export default Main
+export default Main;

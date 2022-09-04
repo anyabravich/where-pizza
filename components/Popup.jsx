@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { rem } from 'polished'
-import { Icons } from 'styles/Icons'
-import Label from './Label'
-import { H4Box } from './H4'
-import Ingredients from './Ingredients'
-import ButtonsPopup from './ButtonsPopup'
-import ButtonsPopupButton from './ButtonsPopupButton'
-import SubtitleTwo from './SubtitleTwo'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
+import { Icons } from 'styles/Icons';
+import Label from './Label';
+import { H4Box } from './H4';
+import Ingredients from './Ingredients';
+import ButtonsPopup from './ButtonsPopup';
+import ButtonsPopupButton from './ButtonsPopupButton';
+import SubtitleTwo from './SubtitleTwo';
 
 // TODO: реализовать клик вне popup
 const Popup = () => {
@@ -19,7 +19,7 @@ const Popup = () => {
         <PopupBtnClose onClick={() => setClosePopup(!closePopup)} />
         <Label>New</Label>
         <PopupImgBox>
-          <PopupImg src={'/images/pizza-1.png'} alt='img' />
+          <PopupImg src={'/images/pizza-1.png'} alt="img" />
         </PopupImgBox>
         <PopupContent>
           <PopupTitle>
@@ -41,8 +41,8 @@ const Popup = () => {
         </PopupContent>
       </PopupBox>
     </PopupOverlay>
-  )
-}
+  );
+};
 
 const PopupOverlay = styled.div`
   position: fixed;
@@ -54,21 +54,21 @@ const PopupOverlay = styled.div`
   height: 100vh;
   background: rgba(25, 25, 25, 0.4);
   z-index: 10;
-  display: ${props => props.closePopup ? 'none' : 'flex'};
+  display: ${(props) => (props.closePopup ? 'none' : 'flex')};
   padding: ${rem(70)};
-`
+`;
 
 const PopupBox = styled.div`
   position: relative;
-  background: ${props => props.theme.colors.white};
+  background: ${(props) => props.theme.colors.white};
   max-width: ${rem(1070)};
   width: 100%;
   min-height: ${rem(680)};
   margin: auto;
-  border-radius: ${props => rem(props.theme.radius.popup)};
+  border-radius: ${(props) => rem(props.theme.radius.popup)};
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-`
+`;
 
 const PopupBtnClose = styled.button`
   width: ${rem(32)};
@@ -76,44 +76,43 @@ const PopupBtnClose = styled.button`
   position: absolute;
   top: 0;
   right: ${rem(-62)};
-  background: url("${Icons('close-popup')}") no-repeat center center;
+  background: url('${Icons('close-popup')}') no-repeat center center;
   cursor: pointer;
-`
+`;
 
 const PopupImgBox = styled.div`
-  /* background: red; */
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: ${rem(520)};
-`
+`;
 
 const PopupImg = styled.img`
   width: 100%;
   max-width: ${rem(450)};
-`
+`;
 
 const PopupContent = styled.div`
   position: relative;
   padding: ${rem(32)} ${rem(20)} ${rem(20)};
-`
+`;
 
 const PopupTitle = styled(H4Box)`
   display: flex;
   align-items: center;
   margin-right: ${rem(20)};
   margin-bottom: ${rem(16)};
-`
+`;
 
 const PopupTitleIcon = styled.i`
   display: inline-flex;
   width: ${rem(24)};
   height: ${rem(24)};
-  background: url("${Icons('fire-active')}") no-repeat 0 0;
+  background: url('${Icons('fire-active')}') no-repeat 0 0;
   background-size: contain;
   margin-right: ${rem(8)};
   flex-shrink: 0;
-`
+`;
 
 const PopupInfo = styled.button`
   position: absolute;
@@ -121,9 +120,9 @@ const PopupInfo = styled.button`
   right: ${rem(20)};
   width: ${rem(24)};
   height: ${rem(24)};
-  background: url("${Icons('info')}") no-repeat 0 0;
+  background: url('${Icons('info')}') no-repeat 0 0;
   background-size: contain;
   cursor: pointer;
-`
+`;
 
-export default Popup
+export default Popup;
