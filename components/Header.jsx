@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Container from './Container';
-import TextMini from './TextMini';
-import TextMiniBold from './TextMiniBold';
-import IconText from './IconText';
-import { Icons } from 'styles/Icons';
-import Logo from './Logo';
-import ButtonBasket from './ButtonBasket';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import Container from "./Container";
+import TextMini from "./TextMini";
+import TextMiniBold from "./TextMiniBold";
+import IconText from "./IconText";
+import { Icons } from "styles/Icons";
+import Logo from "./Logo";
+import ButtonBasket from "./ButtonBasket";
 
 const Header = () => {
   return (
@@ -16,15 +16,16 @@ const Header = () => {
         <Container>
           <HeaderTopBox>
             <HeaderTopLeft>
-              <IconText icon={Icons('location')} text="Москва" />
+              <IconText icon={Icons("location")} text="Москва" />
               <TextMini dXlNone={true}>Проверить адрес</TextMini>
               <TextMini>
-                Среднее время доставки*: <TextMiniBold pl={4}>00:24:19</TextMiniBold>
+                Среднее время доставки*:{" "}
+                <TextMiniBold pl={4}>00:24:19</TextMiniBold>
               </TextMini>
             </HeaderTopLeft>
             <HeaderTopRight dSmNone={true}>
               <TextMini dLgNone={true}>Время работы: с 11:00 до 23:00</TextMini>
-              <IconText icon={Icons('account')} text="Войти в аккаунт" />
+              <IconText icon={Icons("account")} text="Войти в аккаунт" />
             </HeaderTopRight>
           </HeaderTopBox>
         </Container>
@@ -75,7 +76,7 @@ const HeaderTopLeft = styled.div`
 
 const HeaderTopRight = styled(HeaderTopLeft)`
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: ${(props) => (props.dSmNone ? 'none' : null)};
+    display: ${(props) => (props.dSmNone ? "none" : null)};
   }
 `;
 

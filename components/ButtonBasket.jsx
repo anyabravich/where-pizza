@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { Icons } from 'styles/Icons';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import { Icons } from "styles/Icons";
 
 // TODO: сделать для мобильного кнопку раскрытия меню
 const ButtonBasket = () => {
@@ -30,13 +30,13 @@ const ButtonBasketIcon = styled.i`
   width: ${rem(24)};
   height: ${rem(24)};
   // prettier-ignore
-  background: url("${Icons('basket')}") no-repeat center center;
+  background: url("${Icons("basket")}") no-repeat center center;
 `;
 
 const ButtonBasketCount = styled.span`
   font-weight: 400;
   font-size: ${rem(16)};
-  font-family: 'SF Pro Text';
+  font-family: "SF Pro Text";
 `;
 
 export default ButtonBasket;

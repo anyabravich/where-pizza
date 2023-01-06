@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
 // TODO: для карточки ввести переменную ограничения на кол. строк
 const Text = ({ children, mb = 0, mbSm = 0 }) => {

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
-const Subtitle = ({ children, mb = 0, mbSm = 0, color = 'transparent' }) => {
+const Subtitle = ({ children, mb = 0, mbSm = 0, color = "transparent" }) => {
   return (
     <SubtitleBox mb={mb} mbSm={mbSm} color={color}>
       {children}
@@ -15,7 +15,10 @@ export const SubtitleBox = styled.p`
   font-weight: 600;
   font-size: ${rem(18)};
   line-height: 133%;
-  color: ${(props) => (props.color === 'primary' ? props.theme.colors.primary.default : props.theme.colors.black)};
+  color: ${(props) =>
+    props.color === "primary"
+      ? props.theme.colors.primary.default
+      : props.theme.colors.black};
   margin-bottom: ${(props) => `${props.mb}px`};
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: ${rem(14)};

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
-const Button = ({ children, view = 'full', mobile = true }) => {
+const Button = ({ children, view = "full", mobile = true }) => {
   return (
     <ButtonBox view={view} mobile={mobile}>
       {children}
@@ -22,7 +22,7 @@ export const ButtonBox = styled.button`
   cursor: pointer;
   // TODO: добавить hover, active
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: ${(props) => (props.mobile ? 'block' : 'none')};
+    display: ${(props) => (props.mobile ? "block" : "none")};
   }
 `;
 

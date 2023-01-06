@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { Icons } from 'styles/Icons';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import { Icons } from "styles/Icons";
 
 const Category = ({ icon, text, id, active, toggleTab, page, disabled }) => {
   return (
     <CategoryBox onClick={() => toggleTab(id)} page={page} disabled={disabled}>
-      <CategoryIcon icon={active ? Icons(icon + '-active') : Icons(icon)} />
+      <CategoryIcon icon={active ? Icons(icon + "-active") : Icons(icon)} />
       <CategoryText active={active}>{text}</CategoryText>
     </CategoryBox>
   );
 };
 
 const CategoryBox = styled.button`
-  pointer-events: ${(props) => (props.disabled ? 'none' : 'auto')};
-  width: ${(props) => (props.page === 'components' ? rem(135) : '100%')};
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  width: ${(props) => (props.page === "components" ? rem(135) : "100%")};
   padding: ${rem(20)} ${rem(25)};
-  color: ${(props) => (props.active ? props.theme.colors.red : props.theme.colors.black)};
+  color: ${(props) =>
+    props.active ? props.theme.colors.red : props.theme.colors.black};
   background: ${(props) => props.theme.colors.white};
   border-radius: ${(props) => `${rem(props.theme.radius.category)}`};
   cursor: pointer;
@@ -52,7 +53,9 @@ const CategoryText = styled.p`
   font-size: ${rem(18)};
   text-align: center;
   color: ${(props) =>
-    props.active ? props.theme.colors.black : props.theme.colors.primary.default};
+    props.active
+      ? props.theme.colors.black
+      : props.theme.colors.primary.default};
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: ${rem(14)};
     text-align: left;

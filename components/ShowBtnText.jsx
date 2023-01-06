@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
 const ShowBtnText = ({ isShow, setIsShow }) => {
   return (
     <ShowBtnTextBox isShow={isShow} onClick={() => setIsShow(!isShow)}>
-      {isShow ? 'Скрыть' : 'Показать'}
+      {isShow ? "Скрыть" : "Показать"}
     </ShowBtnTextBox>
   );
 };

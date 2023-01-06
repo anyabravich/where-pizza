@@ -1,21 +1,21 @@
-import Container from 'components/Container';
-import H2 from 'components/H2';
-import Head from 'next/head';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Cards from 'components/Cards';
-import Category from 'components/Category';
-import Categories from 'components/Categories';
-import DeliveryInfo from 'components/DeliveryInfo';
-import Popup from 'components/Popup';
+import Container from "components/Container";
+import H2 from "components/H2";
+import Head from "next/head";
+import styled from "styled-components";
+import { rem } from "polished";
+import Cards from "components/Cards";
+import Category from "components/Category";
+import Categories from "components/Categories";
+import DeliveryInfo from "components/DeliveryInfo";
+import Popup from "components/Popup";
 
-import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import CardsAndTitle from 'components/CardsAndTitle';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import CardsAndTitle from "components/CardsAndTitle";
 
 export default function Home() {
   const [categories, setCategories] = useState([]);
@@ -24,13 +24,13 @@ export default function Home() {
   const toggleTab = (index) => setIsActive(index);
 
   useEffect(() => {
-    fetch('db/db.json')
+    fetch("db/db.json")
       .then((response) => response.json())
-      .then((json) => setCategories(json['categories']));
+      .then((json) => setCategories(json["categories"]));
 
-    fetch('db/db.json')
+    fetch("db/db.json")
       .then((response) => response.json())
-      .then((json) => setProducts(json['products']));
+      .then((json) => setProducts(json["products"]));
   }, []);
 
   return (
@@ -68,7 +68,8 @@ export default function Home() {
                   slidesPerView: 8,
                   spaceBetween: 30,
                 },
-              }}>
+              }}
+            >
               {categories.map(({ icon, text, id }) => (
                 <SwiperSlide key={id}>
                   <Category
@@ -83,7 +84,13 @@ export default function Home() {
             </Swiper>
           </Categories>
           {products.map((item, index) => {
-            return <CardsAndTitle title={item.name} product={item.product} key={index} />;
+            return (
+              <CardsAndTitle
+                title={item.name}
+                product={item.product}
+                key={index}
+              />
+            );
           })}
           <DeliveryInfo title="Доставка пиццы в Москве" />
         </Container>

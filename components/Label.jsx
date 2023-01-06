@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
-const Label = ({ children, size = 'small', page }) => {
+const Label = ({ children, size = "small", page }) => {
   return (
     <LabelBox size={size} page={page}>
       {children}
@@ -14,13 +14,14 @@ const LabelBox = styled.div`
   display: inline-flex;
   color: ${(props) => props.theme.colors.white};
   background: ${(props) => props.theme.colors.red};
-  border-radius: ${(props) => `0 ${rem(props.theme.radius.label)} ${rem(props.theme.radius.label)} 0`};
+  border-radius: ${(props) =>
+    `0 ${rem(props.theme.radius.label)} ${rem(props.theme.radius.label)} 0`};
   cursor: default;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   ${(props) => {
-    if (props.size === 'small') {
+    if (props.size === "small") {
       return `
           padding: ${rem(7)} ${rem(16)};
           font-size: ${rem(14)};
@@ -35,7 +36,7 @@ const LabelBox = styled.div`
     }
   }}
   ${(props) => {
-    if (props.page !== 'components') {
+    if (props.page !== "components") {
       return `
             position: absolute;
             top: ${rem(20)};
@@ -46,7 +47,7 @@ const LabelBox = styled.div`
   }}
   @media ${(props) => props.theme.breakpoints.sm} {
     ${(props) => {
-      if (props.size === 'small') {
+      if (props.size === "small") {
         return `
             padding: ${rem(4)} ${rem(8)};
             font-size: ${rem(12)};

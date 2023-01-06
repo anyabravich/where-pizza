@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
 const H3 = ({ children, mb = 0, mbSm = 0 }) => {
   return (
