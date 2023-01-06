@@ -1,6 +1,6 @@
-import React from 'react';
-import H2 from './H2';
-import Cards from './Cards';
+import React from "react";
+import H2 from "./H2";
+import Cards from "./Cards";
 
 const CardsAndTitle = ({ title, product }) => {
   return (

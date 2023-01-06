@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Container from './Container';
-import Logo from './Logo';
-import { TextBox } from './Text';
-import H4 from './H4';
-import Link from 'next/link';
-import IconText from './IconText';
-import { Icons } from 'styles/Icons';
-import { pxToPercent } from 'styles/Mixins';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import Container from "./Container";
+import Logo from "./Logo";
+import { TextBox } from "./Text";
+import H4 from "./H4";
+import Link from "next/link";
+import IconText from "./IconText";
+import { Icons } from "styles/Icons";
+import { pxToPercent } from "styles/Mixins";
 
 // TODO: все данные брать из json дубликатов не должно быть
 const Footer = () => {
@@ -70,26 +70,29 @@ const Footer = () => {
               <FooterLi>
                 <Link href="tel:79262231011" passHref>
                   <FooterLink>
-                    <IconText icon={Icons('tel')} text="+7 (926) 223-10-11" />
+                    <IconText icon={Icons("tel")} text="+7 (926) 223-10-11" />
                   </FooterLink>
                 </Link>
               </FooterLi>
               <FooterLi>
                 <Link href="/" passHref>
                   <FooterLink>
-                    <IconText icon={Icons('location')} text="Москва, ул. Юных Ленинцев, д.99" />
+                    <IconText
+                      icon={Icons("location")}
+                      text="Москва, ул. Юных Ленинцев, д.99"
+                    />
                   </FooterLink>
                 </Link>
               </FooterLi>
               <FooterLi>
                 <Link href="/" passHref>
                   <FooterLink>
-                    <IconText icon={Icons('facebook')} text="Facebook" />
+                    <IconText icon={Icons("facebook")} text="Facebook" />
                   </FooterLink>
                 </Link>
                 <Link href="/" passHref>
                   <FooterLink>
-                    <IconText icon={Icons('instagram')} text="Instagram" />
+                    <IconText icon={Icons("instagram")} text="Instagram" />
                   </FooterLink>
                 </Link>
               </FooterLi>

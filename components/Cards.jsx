@@ -1,14 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import Card from './Card';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import Card from "./Card";
 
 const Cards = ({ product }) => {
   return (
     <CardsBox>
-      {product.map(({ img, title, description, oldPrice, price, label }, index) => (
-        <Card img={img} title={title} description={description} oldPrice={oldPrice} price={price} label={label} key={index} />
-      ))}
+      {product.map(
+        ({ img, title, description, oldPrice, price, label }, index) => (
+          <Card
+            img={img}
+            title={title}
+            description={description}
+            oldPrice={oldPrice}
+            price={price}
+            label={label}
+            key={index}
+          />
+        )
+      )}
     </CardsBox>
   );
 };

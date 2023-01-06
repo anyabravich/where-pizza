@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import styled from "styled-components";
+import { rem } from "polished";
 
-const H2 = ({ children, mb = 0, align = 'left' }) => {
+const H2 = ({ children, mb = 0, align = "left" }) => {
   return (
     <H2Box mb={mb} align={align}>
       {children}
@@ -17,7 +17,7 @@ const H2Box = styled.h2`
   line-height: 120%;
   color: ${(props) => props.theme.colors.black};
   ${(props) => {
-    if (props.align === 'center') {
+    if (props.align === "center") {
       return `
           text-align: center;
         `;

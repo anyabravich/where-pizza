@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { rem } from 'polished';
-import { Icons } from 'styles/Icons';
-import Label from './Label';
-import { H4Box } from './H4';
-import Ingredients from './Ingredients';
-import ButtonsPopup from './ButtonsPopup';
-import ButtonsPopupButton from './ButtonsPopupButton';
-import SubtitleTwo from './SubtitleTwo';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { rem } from "polished";
+import { Icons } from "styles/Icons";
+import Label from "./Label";
+import { H4Box } from "./H4";
+import Ingredients from "./Ingredients";
+import ButtonsPopup from "./ButtonsPopup";
+import ButtonsPopupButton from "./ButtonsPopupButton";
+import SubtitleTwo from "./SubtitleTwo";
 
 // TODO: реализовать клик вне popup
 const Popup = () => {
@@ -19,7 +19,7 @@ const Popup = () => {
         <PopupBtnClose onClick={() => setClosePopup(!closePopup)} />
         <Label>New</Label>
         <PopupImgBox>
-          <PopupImg src={'/images/pizza-1.png'} alt="img" />
+          <PopupImg src={"/images/pizza-1.png"} alt="img" />
         </PopupImgBox>
         <PopupContent>
           <PopupTitle>
@@ -29,13 +29,13 @@ const Popup = () => {
           <PopupInfo />
           <Ingredients />
           <ButtonsPopup mb={16}>
-            <ButtonsPopupButton text={'Традиционное'} active />
-            <ButtonsPopupButton text={'Тонкое'} />
+            <ButtonsPopupButton text={"Традиционное"} active />
+            <ButtonsPopupButton text={"Тонкое"} />
           </ButtonsPopup>
           <ButtonsPopup mb={24}>
-            <ButtonsPopupButton text={'20 см'} active />
-            <ButtonsPopupButton text={'28 см'} />
-            <ButtonsPopupButton text={'33 см'} />
+            <ButtonsPopupButton text={"20 см"} active />
+            <ButtonsPopupButton text={"28 см"} />
+            <ButtonsPopupButton text={"33 см"} />
           </ButtonsPopup>
           <SubtitleTwo mb={16}>Добавьте в пиццу</SubtitleTwo>
         </PopupContent>
@@ -54,7 +54,7 @@ const PopupOverlay = styled.div`
   height: 100vh;
   background: rgba(25, 25, 25, 0.4);
   z-index: 10;
-  display: ${(props) => (props.closePopup ? 'none' : 'flex')};
+  display: ${(props) => (props.closePopup ? "none" : "flex")};
   padding: ${rem(70)};
 `;
 
@@ -76,7 +76,7 @@ const PopupBtnClose = styled.button`
   position: absolute;
   top: 0;
   right: ${rem(-62)};
-  background: url('${Icons('close-popup')}') no-repeat center center;
+  background: url("${Icons("close-popup")}") no-repeat center center;
   cursor: pointer;
 `;
 
@@ -108,7 +108,7 @@ const PopupTitleIcon = styled.i`
   display: inline-flex;
   width: ${rem(24)};
   height: ${rem(24)};
-  background: url('${Icons('fire-active')}') no-repeat 0 0;
+  background: url("${Icons("fire-active")}") no-repeat 0 0;
   background-size: contain;
   margin-right: ${rem(8)};
   flex-shrink: 0;
@@ -120,7 +120,7 @@ const PopupInfo = styled.button`
   right: ${rem(20)};
   width: ${rem(24)};
   height: ${rem(24)};
-  background: url('${Icons('info')}') no-repeat 0 0;
+  background: url("${Icons("info")}") no-repeat 0 0;
   background-size: contain;
   cursor: pointer;
 `;

@@ -1,8 +1,8 @@
-import React from 'react';
-import { ButtonBox } from './Button';
-import { TextBox } from './Text';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import React from "react";
+import { ButtonBox } from "./Button";
+import { TextBox } from "./Text";
+import styled from "styled-components";
+import { rem } from "polished";
 
 const ButtonsPopupButton = ({ text, active }) => {
   return (
@@ -46,7 +46,8 @@ const ButtonsPopupButtonBox = styled(ButtonBox)`
 const ButtonsPopupButtonText = styled(TextBox)`
   position: relative;
   z-index: 1;
-  color: ${(props) => (props.active ? props.theme.colors.white : props.theme.colors.black)};
+  color: ${(props) =>
+    props.active ? props.theme.colors.white : props.theme.colors.black};
 `;
 
 export default ButtonsPopupButton;

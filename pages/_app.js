@@ -1,12 +1,11 @@
-import Footer from "components/Footer"
-import Header from "components/Header"
-import Main from "components/Main"
-import Head from "node_modules/next/head"
-import GlobalStyle from "styles/GlobalStyle"
-import Theme from "styles/Theme"
-import 'styles/fonts.scss'
-import 'styles/swiper.scss'
-import 'styles/global.scss'
+import Footer from "components/Footer";
+import Header from "components/Header";
+import Main from "components/Main";
+import Head from "node_modules/next/head";
+import GlobalStyle from "styles/GlobalStyle";
+import Theme from "styles/Theme";
+import "styles/fonts.scss";
+import "styles/swiper.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -23,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         <Footer />
       </Theme>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
