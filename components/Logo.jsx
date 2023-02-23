@@ -6,13 +6,13 @@ import Link from "next/link";
 
 const Logo = ({ w }) => {
   return (
-    <Link href="/" passHref>
-      <LogoBox w={w}>Logo</LogoBox>
-    </Link>
+    <LogoBox href="/" w={w}>
+      Logo
+    </LogoBox>
   );
 };
 
-const LogoBox = styled.a`
+const LogoBox = styled(Link)`
   display: block;
   width: ${(props) => `${rem(props.w)}`};
   height: ${rem(32)};

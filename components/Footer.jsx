@@ -23,19 +23,13 @@ const Footer = () => {
             <H4 mb={22}>Куда пицца</H4>
             <FooterUl>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>О компании</FooterLink>
-                </Link>
+                <FooterLink href="/">О компании</FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>Пользовательское соглашение</FooterLink>
-                </Link>
+                <FooterLink href="/">Пользовательское соглашение</FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>Условия гарантии</FooterLink>
-                </Link>
+                <FooterLink href="/">Условия гарантии</FooterLink>
               </FooterLi>
             </FooterUl>
           </FooterCol>
@@ -43,24 +37,16 @@ const Footer = () => {
             <H4 mb={22}>Помощь</H4>
             <FooterUl>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>Ресторан</FooterLink>
-                </Link>
+                <FooterLink href="/">Ресторан</FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>Контакты</FooterLink>
-                </Link>
+                <FooterLink href="/">Контакты</FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>Поддержка</FooterLink>
-                </Link>
+                <FooterLink href="/">Поддержка</FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>Отследить заказ</FooterLink>
-                </Link>
+                <FooterLink href="/">Отследить заказ</FooterLink>
               </FooterLi>
             </FooterUl>
           </FooterCol>
@@ -68,33 +54,25 @@ const Footer = () => {
             <H4 mb={22}>Контакты</H4>
             <FooterUl>
               <FooterLi>
-                <Link href="tel:79262231011" passHref>
-                  <FooterLink>
-                    <IconText icon={Icons("tel")} text="+7 (926) 223-10-11" />
-                  </FooterLink>
-                </Link>
+                <FooterLink href="tel:79262231011">
+                  <IconText icon={Icons("tel")} text="+7 (926) 223-10-11" />
+                </FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>
-                    <IconText
-                      icon={Icons("location")}
-                      text="Москва, ул. Юных Ленинцев, д.99"
-                    />
-                  </FooterLink>
-                </Link>
+                <FooterLink href="/">
+                  <IconText
+                    icon={Icons("location")}
+                    text="Москва, ул. Юных Ленинцев, д.99"
+                  />
+                </FooterLink>
               </FooterLi>
               <FooterLi>
-                <Link href="/" passHref>
-                  <FooterLink>
-                    <IconText icon={Icons("facebook")} text="Facebook" />
-                  </FooterLink>
-                </Link>
-                <Link href="/" passHref>
-                  <FooterLink>
-                    <IconText icon={Icons("instagram")} text="Instagram" />
-                  </FooterLink>
-                </Link>
+                <FooterLink href="/">
+                  <IconText icon={Icons("facebook")} text="Facebook" />
+                </FooterLink>
+                <FooterLink href="/">
+                  <IconText icon={Icons("instagram")} text="Instagram" />
+                </FooterLink>
               </FooterLi>
             </FooterUl>
           </FooterCol>
@@ -154,7 +132,7 @@ const FooterLi = styled.li`
   }
 `;
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   font-size: ${rem(16)};
   font-weight: 400;
   line-height: 138%;
