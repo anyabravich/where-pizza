@@ -20,7 +20,6 @@ export const ButtonBox = styled.button`
   line-height: 138%;
   font-weight: 400;
   cursor: pointer;
-  // TODO: добавить hover, active
   @media ${(props) => props.theme.breakpoints.sm} {
     display: ${(props) => (props.mobile ? "block" : "none")};
   }
