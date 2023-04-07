@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -6,18 +6,19 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  /* TODO: хз насколько это норм */
+
   #__next {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
+  
   html,
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
   }
   body {
-    font-size: 16px;
+    font-size: 1rem;
     background: #F9F9F9;
   }
   li {
