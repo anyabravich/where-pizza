@@ -12,7 +12,6 @@ import Subtitle from "components/Subtitle";
 import Text from "components/Text";
 import Head from "next/head";
 import React, { useState } from "react";
-import { Icons } from "styles/Icons";
 
 const Components = () => {
   const [isActive, setIsActive] = useState(false);
